@@ -9,6 +9,6 @@ func init() {
 }
 
 func setRoutes() {
-	router.GET("/add/:strX/:strY", addNumbers)
-	router.GET("/subtract/:strX/:strY", subtractNumbers)
+	router.GET("/add/:strX/:strY", AddNumbers)
+	router.GET("/subtract/:strX/:strY", SubtractNumbers)
 }

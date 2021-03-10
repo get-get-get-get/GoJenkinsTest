@@ -19,7 +19,7 @@ func StartApp() {
 	}
 }
 
-func addNumbers(c *gin.Context) {
+func AddNumbers(c *gin.Context) {
 	x, err := strconv.Atoi(c.Param("strX"))
 	if err != nil {
 		c.String(http.StatusBadRequest, addNumbersUsageMsg)
@@ -34,7 +34,7 @@ func addNumbers(c *gin.Context) {
 	c.String(http.StatusOK, strconv.Itoa(x+y))
 }
 
-func subtractNumbers(c *gin.Context) {
+func SubtractNumbers(c *gin.Context) {
 	x, err := strconv.Atoi(c.Param("strX"))
 	if err != nil {
 		c.String(http.StatusBadRequest, subtractNumbersUsageMsg)
