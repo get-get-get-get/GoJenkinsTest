@@ -38,7 +38,7 @@ func TestSubtractNumbers(t *testing.T) {
 	router.ServeHTTP(w, req)
 
 	assert.Equal(t, http.StatusOK, w.Code)
-	assert.Equal(t, "-4", w.Body.String())
+	assert.Equal(t, "-2", w.Body.String())
 }
 
 // Test SubtractNumbers where param cannot be converted to int
