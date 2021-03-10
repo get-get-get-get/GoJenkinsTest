@@ -7,9 +7,12 @@ import (
 	"testing"
 )
 
+func init() {
+	setRoutes()
+}
+
 // Test AddNumbers with correct usage
 func TestAddNumbers(t *testing.T) {
-	setRoutes()
 
 	w := httptest.NewRecorder()
 	req, _ := http.NewRequest("GET", "/add/2/4", nil)
@@ -21,7 +24,6 @@ func TestAddNumbers(t *testing.T) {
 
 // Test AddNumbers where param cannot be converted to int
 func TestAddNumbersBadRequest(t *testing.T) {
-	setRoutes()
 
 	w := httptest.NewRecorder()
 	req, _ := http.NewRequest("GET", "/add/2/four", nil)
