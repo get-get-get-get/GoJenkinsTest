@@ -10,7 +10,7 @@ pipeline {
         }
         stage('test') {
             steps {
-                script {
+                withEnv(['XDG_CACHE_HOME=/tmp']) {
                     sh 'go test .'
                 }
             }
